@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-right: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  background-image: url(image/a-photo-of-a-laptop-with-the-neushub-logo-on-the-s-PfvknZPfTZqxQSqzXr5qqg-fVIdFLOJQfOeMThweDfRRg.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 1rem;
+  color: #333333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #666666;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: blueviolet;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a36a3;
+}

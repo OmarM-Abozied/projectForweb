@@ -1,0 +1,438 @@
+ul {
+  list-style: none;
+}
+li {
+  font-size: 20px;
+}
+li a {
+  color: black;
+  text-decoration: none;
+}
+.up {
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border-radius: 80px;
+  border-style: none;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Start Variables */
+:root {
+  --main-color: blueviolet;
+  --secondary-color: #2c4755;
+  --section-padding: 40px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* ................................... */
+
+nav {
+  max-width: 100%;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px #ddd;
+  flex-wrap: wrap;
+}
+nav .div-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  nav .div-nav {
+    gap: 10px;
+  }
+}
+nav > .divf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+}
+@media (max-width: 991px) {
+  nav {
+    justify-content: center;
+  }
+}
+nav div ul {
+  display: flex;
+}
+nav ul > li > a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+nav ul > li > a:hover {
+  color: #6a36a3;
+  background-color: #fafafa;
+}
+nav ul > li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background-color: #6a36a3;
+  transition: 0.3s;
+}
+nav ul li a:hover::before {
+  left: 0;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  width: 200px;
+  background-color: black;
+  height: 50px;
+}
+
+.login:hover {
+  background-color: #444;
+}
+
+.page {
+  max-width: 100%;
+  height: calc(100vh - 60px);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto 50px;
+  grid-template-areas: "cont cont cont cont cont cont side side side side";
+  margin: 0 50px;
+}
+@media (max-width: 991px) {
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.section1 {
+  grid-area: cont;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.secbut {
+  display: flex;
+  width: 80%;
+  gap: 15px;
+}
+@media (max-width: 991px) {
+  .secbut {
+    width: 100%;
+  }
+}
+
+.secbut > button {
+  width: 50%;
+}
+aside {
+  grid-area: side;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+button {
+  background-color: blueviolet;
+  color: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #6a36a3;
+}
+.black {
+  background-color: black;
+}
+.black:hover {
+  background-color: #444;
+}
+
+.First {
+  margin: 20px 0;
+  color: blueviolet;
+}
+
+.firstrticle {
+  max-width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 767px) {
+  .firstrticle small {
+    font-size: 12px;
+  }
+}
+.firstrticle > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .firstrticle ul {
+    gap: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .firstrticle ul li {
+    font-size: 15px;
+  }
+}
+.active {
+  background-color: blueviolet;
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.aside1,
+.aside3,
+.aside4,
+.aside5 {
+  margin: 50px 50px;
+  max-width: 100%;
+}
+
+.aside2 {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  padding: 10px; /* Adds some padding for better visuals */
+  max-height: 400px; /* Limits the height if needed (optional) */
+  max-width: 100%; /* Ensures it doesn't overflow the container */
+  background-color: #f9f9f9; /* Optional: Adds a light background for aesthetics */
+}
+.aside2::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+  background-color: #e0e0e0; /* Background of the scrollbar */
+}
+
+.aside2::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 4px; /* Rounds the scrollbar edges */
+}
+
+.aside2 > article {
+  display: flex;
+  height: 160px;
+  width: 500px;
+  max-width: 100%;
+  gap: 10px;
+  background-color: #121111;
+  color: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 300px; /* Ensures articles maintain a consistent width */
+  flex-shrink: 0; /* Prevents articles from shrinking */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better separation */
+}
+article > img {
+  width: 50%;
+}
+article > P {
+  display: inline;
+}
+
+.card2 {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.card3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+small {
+  color: darkgray;
+}
+
+label {
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+}
+
+.lastarticle {
+  max-width: 100%;
+  text-align: center;
+  color: #eee;
+  background-color: #121111;
+  padding: 40px;
+  margin: 50px 0;
+  font-family: Arial, sans-serif;
+}
+
+.lastarticle > button {
+  margin: 10px 0 5px;
+  padding: 15px;
+  width: 150px;
+}
+.lastarticle h1 {
+  font-size: 30px;
+}
+@media (max-width: 767px) {
+  .lastarticle h1 {
+    font-size: 20px;
+  }
+}
+.section2 {
+  max-width: 100%;
+  margin: 50px auto;
+  width: 400px;
+  font-family: Arial, sans-serif;
+}
+@media (max-width: 991px) {
+  .section2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.div1 {
+  text-align: center;
+}
+.div1 > .small {
+  position: relative;
+  right: 40px;
+  color: black;
+}
+.div1 > .div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.div3 {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+input {
+  width: 50%;
+  padding: 10px;
+  background-color: #eee;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  border: none;
+}
+textarea {
+  background-color: #eee;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  resize: none;
+  border: none;
+}
+form > button {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+  padding: 5vh 25vh;
+  background-color: #121111;
+}
+
+.footer .icon {
+  display: flex;
+  gap: 32px;
+}
+.footer .icon i {
+  font-size: 24px;
+  cursor: pointer;
+}
+.footer span {
+  color: #6a36a3;
+}
